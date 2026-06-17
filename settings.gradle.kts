@@ -25,6 +25,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "LargeMultiModuleApp"
+
 include(":app")
 include(":core:model")
+include(":core:common")
  
