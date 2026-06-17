@@ -12,6 +12,12 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<KotlinJvmProjectExtension> {
                 jvmToolchain(17)
+                compilerOptions {
+                    freeCompilerArgs.addAll(
+                        "-Xconsistent-data-class-copy-visibility",
+                        "-Xno-warn-non-ascii-identifiers"
+                    )
+                }
             }
 
             // все JVM-модули прогоняют тесты на JUnit 5
