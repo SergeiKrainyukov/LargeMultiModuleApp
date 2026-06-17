@@ -5,16 +5,12 @@ plugins {
 
 android {
     namespace = "com.skrainyukov.largemultimoduleapp"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.skrainyukov.largemultimoduleapp"
         minSdk = 28
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
