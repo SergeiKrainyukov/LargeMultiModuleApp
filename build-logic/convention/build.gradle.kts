@@ -1,4 +1,6 @@
-plugins { `kotlin-dsl` }
+plugins {
+    `kotlin-dsl`
+}
 
 dependencies {
     compileOnly(libs.android.gradlePlugin)
@@ -8,15 +10,20 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidLibrary") {
-            id = "LargeMultimoduleApp.android.library"
+            id = "LargeMultiModuleApp.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+
+        register("jvmLibrary") {
+            id = "LargeMultiModuleApp.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
         register("androidFeature") {
-            id = "LargeMultimoduleApp.android.feature"
+            id = "LargeMultiModuleApp.android.feature"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
         register("androidHilt") {
-            id = "LargeMultimoduleApp.android.hilt"
+            id = "LargeMultiModuleApp.android.hilt"
             implementationClass = "HiltConventionPlugin"
         }
     }
