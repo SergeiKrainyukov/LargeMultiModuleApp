@@ -22,13 +22,17 @@ gradlePlugin {
             id = "LargeMultiModuleApp.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
-        register("androidFeature") {
-            id = "LargeMultiModuleApp.android.feature"
-            implementationClass = "AndroidFeatureConventionPlugin"
-        }
+//        register("androidFeature") {
+//            id = "LargeMultiModuleApp.android.feature"
+//            implementationClass = "AndroidFeatureConventionPlugin"
+//        }
         register("androidHilt") {
             id = "LargeMultiModuleApp.android.hilt"
             implementationClass = "HiltConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = "LargeMultiModuleApp.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
     }
 }
