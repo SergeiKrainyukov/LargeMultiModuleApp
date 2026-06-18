@@ -12,6 +12,8 @@ class HiltConventionPlugin : Plugin<Project> {
         pluginManager.apply("com.google.devtools.ksp")
         dependencies {
             "ksp"(libs.findLibrary("hilt.compiler").get())
+            // Fix for Kotlin 2.4.0 compatibility with Hilt
+            "ksp"("org.jetbrains.kotlin:kotlin-metadata-jvm:2.4.0")
         }
 
         // Hilt Android-рантайм и его Gradle-плагин — только для Android-модулей.

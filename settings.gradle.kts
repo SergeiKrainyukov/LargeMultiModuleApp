@@ -30,4 +30,5 @@ include(":app")
 include(":core:model")
 include(":core:common")
 include(":core:designsystem")
- 
+include(":feature:accounts:api")
+include(":feature:accounts:impl")
